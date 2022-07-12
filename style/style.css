@@ -146,13 +146,13 @@ tbody {
 }
 .button-tfoot-done {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
     border: 1px solid lightblue;
     color: rgba(0, 128, 0, 0.747);
 }
 .button-tfoot-done:hover {
-    background-color: rgba(230, 217, 173, 0.432);
+    background-color: rgba(173, 216, 230, 0.432);
 }
 .button-tfoot-return {
     width: 100%;
