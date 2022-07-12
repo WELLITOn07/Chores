@@ -3,7 +3,6 @@ function constructorChore() {
         /*Global*/
         input: document.querySelector('.input-text'),
         tbody: document.querySelector('.tbody'),
-        tbodyAllTR: document.getElementsByClassName('allTR'),
         talksArray: [],
         arrayTR: [] = document.getElementsByClassName('taskCompleted'),
         checkBoxList : document.getElementsByClassName('td-checkbox'),
@@ -105,7 +104,8 @@ function constructorChore() {
             this.input.focus();          
         },
         applyingProgress() {
-            this.attTalksArray()
+            let tbodyAllTR = []
+            this.tbodyAllTR = document.getElementsByClassName('allTR')
             let progress
             this.progress = document.querySelector('.progress-img')
             this.progress.setAttribute('max', this.tbodyAllTR.length)
@@ -114,7 +114,8 @@ function constructorChore() {
             this.progress.setAttribute('value', this.arrayTR.length)
         },
         attTalksArray() {
-            
+            this.tbodyAllTR.length = 0
+            this.applyingProgress()
         }
     }
     //----end return----//       
