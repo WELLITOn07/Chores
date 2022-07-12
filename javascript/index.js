@@ -71,7 +71,7 @@ function constructorChore() {
                     this.applyingProgressDone()
                 }
                 if (ev.classList.contains('icon-help')) {
-                    window.alert('Lista de tarefas com progresso, para adicionar tarefas click em: <ADD>, para marcar como concluido use: <DONE>, para desfazer seleção use <RETURN>, para remover selecionados use: <DEL>, para selecionar tudo use: <ALL>')
+                    window.alert('Lista de tarefas com progresso, para adicionar tarefas click em: <ADD>, para marcar como concluido use: <DONE>, para desfazer seleção use: <RETURN>, para remover selecionados use: <DEL>, para selecionar tudo use: <ALL>')
                 }
             });
         },
