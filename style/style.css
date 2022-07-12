@@ -47,7 +47,7 @@ main {
 header {
     display: flex;
     flex-direction: column;
-    width: 99.7%;
+    width: 99.6%;
     height: 100px;
     margin: auto;
     background-color: lightblue;
@@ -130,22 +130,42 @@ h1 {
 }
 .button-tfoot-done {
     width: 100%;
-    padding: 5px;
+    padding: 4px;
     cursor: pointer;
     border: 1px solid lightblue;
     color: rgba(0, 128, 0, 0.747);
 }
 .button-tfoot-done:hover {
-    background-color: rgba(173, 216, 230, 0.432);
+    background-color: rgba(230, 217, 173, 0.432);
 }
 .button-tfoot-return {
     width: 100%;
     cursor: pointer;
     border: 1px solid lightblue;
     font-size: 1.2em;
-    color: rgba(255, 0, 0, 0.493);
 }
 .button-tfoot-return:hover {
+    background-color: rgba(173, 216, 230, 0.432);
+}
+.button-tfoot-remove {
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid lightblue;
+    font-size: 14px;
+    color: rgba(255, 0, 0, 0.493);
+    padding: 5px;
+}
+.button-tfoot-remove:hover {
+    background-color: rgba(173, 216, 230, 0.432);
+}
+.button-tfoot-all {
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid lightblue;
+    font-size: 14px;;;
+    padding: 5px;
+}
+.button-tfoot-all:hover {
     background-color: rgba(173, 216, 230, 0.432);
 }
 .progress-th {
@@ -160,7 +180,7 @@ footer {
     height: auto;
     background-color: lightblue;
     padding: 10px;
-    font-size: 1.3em;
+    font-size: 1em;
     font-family: var(--fonts-HappyTime);
     color: rgba(26, 59, 70, 0.555);
     text-align: center;

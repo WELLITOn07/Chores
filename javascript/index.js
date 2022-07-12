@@ -2,7 +2,8 @@ function constructorChore() {
     return {
         /*Global*/
         input: document.querySelector('.input-text'),
-        tbody: document.querySelector('tbody'),
+        tbody: document.querySelector('.tbody'),
+        tbodyAllTR: document.getElementsByClassName('allTR'),
         talksArray: [],
         arrayTR: [] = document.getElementsByClassName('taskCompleted'),
         checkBoxList : document.getElementsByClassName('td-checkbox'),
@@ -39,13 +40,33 @@ function constructorChore() {
                          }
                     } 
                 }
+                if (ev.classList.contains('button-tfoot-remove')) {
+                    for (let c in this.checkBoxList) {
+                        if (this.checkBoxList[c].checked) {
+                            this.checkBoxList[c].parentElement.remove()
+                         }
+                    } 
+                }
+                if (ev.classList.contains('button-tfoot-all')) {
+                    for (let c in this.checkBoxList) {
+                        if (this.checkBoxList[c].classList.contains('td-checkbox')) {
+                            this.checkBoxList[c].classList.toggle('checked-all');
+                        }
+                        if (this.checkBoxList[c].classList.contains('checked-all')) {
+                            this.checkBoxList[c].checked = true;
+                        } else {
+                            this.checkBoxList[c].checked = false;
+                        }
+                    }
+                }
             });
         },
 
         applyingTalk() {
             let tbodyTR;
             this.tbodyTR = document.createElement('tr');
-            let tbodyTd;
+            this.tbodyTR.setAttribute('class', 'allTR')
+            let tbodyTD;
             this.tbodyTD = document.createElement('td');
             this.tbodyTD.setAttribute('class', 'td-task');
             let tbodyTdInput;
