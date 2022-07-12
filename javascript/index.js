@@ -113,8 +113,9 @@ function constructorChore() {
         applyingProgressDone(){
             this.progress.setAttribute('value', this.arrayTR.length)
         },
-        attTalksArray() {
-            
+        attTalksArray() 
+            this.tbodyAllTR.splice()
+            this.tbodyAllTR = document.getElementsByClassName('allTR')
         }
     }
     //----end return----//       
