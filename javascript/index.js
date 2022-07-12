@@ -27,7 +27,7 @@ function constructorChore() {
                 if (ev.classList.contains('button-tfoot-done')) {
                     for (let c in this.checkBoxList) {
                         if (this.checkBoxList[c].checked) {
-                           this.checkBoxList[c].parentElement.classList.add('taskCompleted')
+                           this.checkBoxList[c].parentElement.parentElement.classList.add('taskCompleted')
                         }
                     }
                     /*call*/ 
@@ -36,7 +36,7 @@ function constructorChore() {
                 if (ev.classList.contains('button-tfoot-return')) {
                     for (let c in this.checkBoxList) {
                         if (this.checkBoxList[c].checked) {
-                            this.checkBoxList[c].parentElement.classList.remove('taskCompleted')
+                            this.checkBoxList[c].parentElement.parentElement.classList.remove('taskCompleted')
                             this.progress.setAttribute('value', this.arrayTR.length)
                          }
                     } 
@@ -44,14 +44,9 @@ function constructorChore() {
                 if (ev.classList.contains('button-tfoot-remove')) {
                     for (let c in this.checkBoxList) {
                         if (this.checkBoxList[c].checked) {
-                            this.checkBoxList[c].parentElement.parentElement.classList.toggle('checked')
+                            this.checkBoxList[c].parentElement.parentElement.remove()
                          }
                     } 
-                    for (let c in this.tbodyAllTR) {
-                        if (this.tbodyAllTR[c].classList.contains('checked')) {
-                            
-                        }
-                    }
                 }
                 if (ev.classList.contains('button-tfoot-all')) {
                     for (let c in this.checkBoxList) {
