@@ -44,9 +44,10 @@ function constructorChore() {
                 if (ev.classList.contains('button-tfoot-remove')) {
                     for (let c in this.checkBoxList) {
                         if (this.checkBoxList[c].checked) {
-                            this.checkBoxList[c].parentElement.style.display = 'none'
+                            this.checkBoxList[c].parentElement.remove()
                          }
                     } 
+                    
                 }
                 if (ev.classList.contains('button-tfoot-all')) {
                     for (let c in this.checkBoxList) {
