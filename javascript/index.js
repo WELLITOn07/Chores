@@ -114,8 +114,8 @@ function constructorChore() {
             this.progress.setAttribute('value', this.arrayTR.length)
         },
         attTalksArray() {
-            
-            
+            this.tbodyAllTR.length = 0
+            this.applyingProgress()
         }
     }
     //----end return----//       
