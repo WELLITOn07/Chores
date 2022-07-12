@@ -44,10 +44,14 @@ function constructorChore() {
                 if (ev.classList.contains('button-tfoot-remove')) {
                     for (let c in this.checkBoxList) {
                         if (this.checkBoxList[c].checked) {
-                            this.checkBoxList[c].parentNode.remove()
+                            this.checkBoxList[c].parentElement.parentElement.classList.toggle('checked')
                          }
                     } 
-                    
+                    for (let c in this.tbodyAllTR) {
+                        if (this.tbodyAllTR[c].classList.contains('checked')) {
+                            
+                        }
+                    }
                 }
                 if (ev.classList.contains('button-tfoot-all')) {
                     for (let c in this.checkBoxList) {
@@ -71,18 +75,22 @@ function constructorChore() {
             let tbodyTR;
             this.tbodyTR = document.createElement('tr');
             this.tbodyTR.setAttribute('class', 'allTR')
-            let tbodyTD;
-            this.tbodyTD = document.createElement('td');
-            this.tbodyTD.setAttribute('class', 'td-task');
-            let tbodyTdInput;
-            this.tbodyTdInput = document.createElement('input');
-            this.tbodyTdInput.setAttribute('type', 'checkbox');
-            this.tbodyTdInput.setAttribute('class', 'td-checkbox');
+            let tbodyTDtask;
+            this.tbodyTDtask = document.createElement('td');
+            this.tbodyTDtask.setAttribute('class', 'td-task');
+            let tbodyTDInput;
+            this.tbodyTDInput = document.createElement('td');
+            this.tbodyTDInput.setAttribute('class', 'tbodyTdInput');
+            let inputs;
+            this.inputs = document.createElement('input');
+            this.inputs.setAttribute('type', 'checkbox');
+            this.inputs.setAttribute('class', 'td-checkbox');
             //for//
             for (let c in this.talksArray) {
-                this.tbodyTD.innerHTML = this.talksArray[c];
-                this.tbodyTR.appendChild(this.tbodyTD);
-                this.tbodyTR.appendChild(this.tbodyTdInput);
+                this.tbodyTDtask.innerHTML = this.talksArray[c];
+                this.tbodyTDInput.appendChild(this.inputs);
+                this.tbodyTR.appendChild(this.tbodyTDtask);
+                this.tbodyTR.appendChild(this.tbodyTDInput);
                 this.tbody.appendChild(this.tbodyTR);
             }
         },
