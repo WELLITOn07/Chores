@@ -60,6 +60,9 @@ function constructorChore() {
                         }
                     }
                 }
+                if (ev.classList.contains('icon-help')) {
+                    window.alert('Lista de tarefas com progresso, para adicionar tarefas click em: <ADD>, para marcar como concluido use: <DONE>, para desfazer seleção use <↩>, para remover selecionados use: <DEL>, para selecioar tudo use: <ALL>')
+                }
             });
         },
 
