@@ -1,0 +1,172 @@
+@charset 'UTF-8';
+/*RESETs*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+a {
+    text-decoration: none;
+    font-size: 1em;
+    font-family: var(--fonts-HappyTime);
+    color: rgba(26, 59, 70, 0.555);
+}
+abbr {
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(28, 145, 184);
+}
+/*IMPORTs*/
+@font-face {
+    font-family: 'undergod';
+    src: url('../fonts/Undergod.ttf')
+    format('truetype');
+}
+@font-face {
+    font-family: 'HappyTime';
+    src: url('../fonts/HappyTime.otf')
+    format('opentype');
+}
+/*ROOTs*/
+:root {
+/*fonts*/
+--fonts-undergod: 'undergod', 'Arial', 'Helvetica', 'sans-serif';
+--fonts-HappyTime: 'HappyTime', 'Arial', 'Helvetica', 'sans-serif';
+}
+/*BODY*/
+body {
+    padding: 10px;
+    box-sizing: border-box;
+}
+/*MAIN*/
+main {
+    max-width: 400px;
+    margin: auto;  
+}
+/*HEADER*/
+header {
+    display: flex;
+    flex-direction: column;
+    width: 99.7%;
+    height: 100px;
+    margin: auto;
+    background-color: lightblue;
+    border: 1px solid rgb(3, 53, 73);
+    border-bottom: 0px;
+}
+h1 {
+    font-size: 2em;
+    text-align: center;
+    background-color: aliceblue;
+    width: 100%;
+    font-family: var(--fonts-undergod);
+    margin: auto;
+    letter-spacing: 10px;
+    font-style: italic;
+    text-shadow: 1px 1px 5px whitesmoke;
+}
+.p-header{
+    text-align: center;
+    margin-top: -25px;
+    padding-bottom: 10px;
+    font-size: 1.3em;
+    font-family: var(--fonts-HappyTime);
+    color: rgba(26, 59, 70, 0.555);
+}
+/*TABLE*/
+.table td {
+    border: 1px solid rgb(3, 53, 73);
+    text-align: center;
+    padding: 5px;
+}
+.table {
+    border: 1px solid rgb(3, 53, 73);
+    width: 100%;
+    min-height: 200px;
+    margin: auto;
+}
+.thead-th input {
+    float: left;
+    width: 93%;
+    padding: 10px;
+    border: 1px solid lightblue;
+    text-align: center;
+    grid-area: input;
+}
+.button-add {
+    padding: 10px;
+    width: 100%;
+    float: left;
+    cursor: pointer;
+    border: 1px solid lightblue;
+    grid-area: button;
+    color: rgb(7, 143, 189);
+}.thead-th button:hover {
+    background-color: rgba(173, 216, 230, 0.432);
+}
+#text-progress {
+    background-color: rgba(173, 216, 230, 0.534);
+    font-size: small;
+    font-family: var(--fonts-HappyTime);
+    color: rgba(3, 53, 73, 0.473);
+    padding: 5px;
+}
+.tbody .td-task {
+    background-color: rgba(173, 216, 230, 0.144);
+    text-align: left;
+    word-break: break-all;
+}
+.tbody tr:nth-child(2n) {
+    background-color: rgba(180, 222, 236, 0.342);
+}
+.td-checkbox {
+    width: 100%;
+    margin-top: 5px;
+}
+.taskCompleted {
+    text-decoration: line-through;
+    opacity: 35%;
+    font-style: italic;
+}
+.button-tfoot-done {
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid lightblue;
+    color: rgba(0, 128, 0, 0.747);
+}
+.button-tfoot-done:hover {
+    background-color: rgba(173, 216, 230, 0.432);
+}
+.button-tfoot-return {
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid lightblue;
+    font-size: 1.2em;
+    color: rgba(255, 0, 0, 0.493);
+}
+.button-tfoot-return:hover {
+    background-color: rgba(173, 216, 230, 0.432);
+}
+.progress-th {
+    background-image: linear-gradient(to right, rgb(250, 213, 206) , rgba(255, 255, 0, 0.445), rgba(0, 128, 0, 0.671));
+}
+.progress-img {
+    width: 98%;
+}
+/*FOOTER*/
+footer {
+    max-width: 100%;
+    height: auto;
+    background-color: lightblue;
+    padding: 10px;
+    font-size: 1.3em;
+    font-family: var(--fonts-HappyTime);
+    color: rgba(26, 59, 70, 0.555);
+    text-align: center;
+    border: 1px solid rgb(3, 53, 73);
+    border-top: 0px;
+}
+/*end work*/
+
+

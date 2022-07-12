@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="ViewPort"
+        content="width=device-width, initial-size: 1.0">
+        <title>Chore</title>
+        <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/cornmanthe3rd/metronome/32/Utilities-tasks-icon.png" type="image/x-icon">
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+       <main>
+            <header>
+                <h1>Chore</h1> 
+                <p class="p-header">to-do list</p>
+            </header> 
+            <table class="table">
+                <thead class="thead">
+                    <tr>
+                        <th colspan="2" id="text-progress">Progress</th>
+                    </tr>
+                    <tr>
+                        <th class="progress-th" colspan="3">
+                            <progress class="progress-img" min="0" value="" max="">
+                            </progress>
+                        </th>
+                     </tr>
+                    <tr>
+                        <th class="thead-th input" ><input type="text" placeholder="add your task here" class="input-text"></th>
+            
+                        <th class="thead-th button" ><abbr title="Adicione sua tarefa"></abbr><button class="button-add">ADD</button></abbr></th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                       <!---TABLE-->
+                </tbody>
+                <tfoot class="tfoot">
+                    <tr>
+                        <td><abbr title="Marcar tarefas como realizadas"></abbr><button class="button-tfoot-done">DONE</button></abbr></td>
+                        <!----------------------->
+                        <td><abbr title="Marcar tarefa como pendende"></abbr><button class="button-tfoot-return">↩</button></abbr></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <footer>
+                <p p-footer>Criado por <a href="https://github.com/WELLITOn07" target="_blank"><abbr title="Meu Github">WELLITOn07</abbr>&copy;</a></p>    
+               </footer>
+       </main>
+    </body>
+    <script src="javascript/index.js"></script>
+</html>
