@@ -115,7 +115,7 @@ function constructorChore() {
         },
         attTalksArray() {
             
-            this.tbodyAllTR = document.getElementsByClassName('allTR')
+            
         }
     }
     //----end return----//       
