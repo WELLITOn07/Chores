@@ -146,7 +146,7 @@ tbody {
 }
 .button-tfoot-done {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     cursor: pointer;
     border: 1px solid lightblue;
     color: rgba(0, 128, 0, 0.747);
