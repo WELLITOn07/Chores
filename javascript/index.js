@@ -44,7 +44,7 @@ function constructorChore() {
                 if (ev.classList.contains('button-tfoot-remove')) {
                     for (let c in this.checkBoxList) {
                         if (this.checkBoxList[c].checked) {
-                            this.checkBoxList[c].parentElement.remove()
+                            this.checkBoxList[c].parentNode.remove()
                          }
                     } 
                     

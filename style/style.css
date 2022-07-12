@@ -128,7 +128,7 @@ h1 {
 }
 .td-checkbox {
     width: 100%;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 .taskCompleted {
     text-decoration: line-through;
