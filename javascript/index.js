@@ -114,7 +114,7 @@ function constructorChore() {
             this.progress.setAttribute('value', this.arrayTR.length)
         },
         attTalksArray() {
-            this.tbodyAllTR.delete()
+            
             this.tbodyAllTR = document.getElementsByClassName('allTR')
         }
     }
