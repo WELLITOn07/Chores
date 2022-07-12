@@ -3,7 +3,6 @@ function constructorChore() {
         /*Global*/
         input: document.querySelector('.input-text'),
         tbody: document.querySelector('.tbody'),
-
         tbodyAllTR: document.getElementsByClassName('allTR'),
         talksArray: [],
         arrayTR: [] = document.getElementsByClassName('taskCompleted'),
@@ -33,6 +32,7 @@ function constructorChore() {
                     /*call*/ 
                     this.applyingProgressDone()               
                 }
+                
                 if (ev.classList.contains('button-tfoot-return')) {
                     for (let c in this.checkBoxList) {
                         if (this.checkBoxList[c].checked) {
@@ -40,13 +40,22 @@ function constructorChore() {
                             this.progress.setAttribute('value', this.arrayTR.length)
                          }
                     } 
+                    /*call*/
+                    this.applyingProgressDone()
                 }
                 if (ev.classList.contains('button-tfoot-remove')) {
                     for (let c in this.checkBoxList) {
                         if (this.checkBoxList[c].checked) {
+                            let talkText = ""
+                            this.talkText = this.checkBoxList[c].parentElement.parentElement.innerText
+
                             this.checkBoxList[c].parentElement.parentElement.remove()
+                            /*call*/
+                            this.attTalksArray()
                          }
                     } 
+                    /*call*/
+                    this.applyingProgressDone()
                 }
                 if (ev.classList.contains('button-tfoot-all')) {
                     for (let c in this.checkBoxList) {
@@ -59,6 +68,8 @@ function constructorChore() {
                             this.checkBoxList[c].checked = false;
                         }
                     }
+                    /*call*/
+                    this.applyingProgressDone()
                 }
                 if (ev.classList.contains('icon-help')) {
                     window.alert('Lista de tarefas com progresso, para adicionar tarefas click em: <ADD>, para marcar como concluido use: <DONE>, para desfazer seleção use <↩>, para remover selecionados use: <DEL>, para selecionar tudo use: <ALL>')
@@ -94,13 +105,17 @@ function constructorChore() {
             this.input.focus();          
         },
         applyingProgress() {
+            this.attTalksArray()
             let progress
             this.progress = document.querySelector('.progress-img')
-            this.progress.setAttribute('max', this.talksArray.length)
+            this.progress.setAttribute('max', this.tbodyAllTR.length)
         },
         applyingProgressDone(){
             this.progress.setAttribute('value', this.arrayTR.length)
         },
+        attTalksArray() {
+            
+        }
     }
     //----end return----//       
 };
@@ -108,3 +123,4 @@ function constructorChore() {
 //-------------------------------//
 const chore = constructorChore();
 chore.playConstructor();
+
