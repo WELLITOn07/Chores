@@ -11,6 +11,18 @@ function constructorChore() {
         playConstructor() {
              /*call*/   
             this.eventListener(); 
+            this.eventEnter();
+        },
+        eventEnter() {
+            this.input.addEventListener('keypress', e => {
+                if (e.keyCode == 13) {
+                    this.talksArray.push(this.input.value);
+                    /*call*/               
+                    this.applyingTalk();
+                    this.applyingProgress();
+                    this.focus();
+                }
+            })
         },    
         eventListener() {
             document.addEventListener('click', e => {
